@@ -1,0 +1,46 @@
+<div class="body">
+
+
+    @if (userLoged) {
+        <h3>Hello {{userLoged.company_name}}</h3>
+
+       @if (role === 'writer') {
+        <p>Hello writer</p>
+
+        <nav>
+            <ul>
+                <li>Load script</li>
+            </ul>
+        </nav>
+       }@else {
+           <p>Hello producer</p>
+
+           <div class="container p-5">
+            <!-- <form [formGroup]="fileForm" (ngSubmit)="onSubmitFile()">
+                <h4>Load script</h4>
+                <div class="mb-3">
+                    <label for="formFileMultiple" class="form-label">Script</label>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple formControlName="file_name">
+                </div> -->
+                <!-- <div class="mb-3">
+                    <label class="form-label">Writer</label>
+                    <input type="text" class="form-control">
+                </div> -->
+
+                <!-- <input type="submit" value="send">
+            </form> -->
+            <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">Script</label>
+                <input class="form-control" type="file" id="formFileMultiple" (change)="getFile($event)">
+            </div>
+            <button (click)="loadFile()">cargar</button>
+           </div>
+       }
+    } 
+
+
+
+
+
+
+</div>

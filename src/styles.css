@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --primaryColor: rgba(2, 78, 174, 255);
+    --secondaryColor: rgba(89, 220, 228, 255);
+}
+@font-face {
+    font-family: 'Hiruko';
+    src: url('../../assets/FONTS/font/HirukoPro-BlackOblique.ttf') ;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Hiruko-thin';
+    src: url('../../assets/FONTS/font/HirukoPro-BookOblique.ttf');
+}
+@font-face {
+    font-family: 'Hiruko-extralight';
+    src: url('../../assets/FONTS/font/HirukoPro-ExtraLightOblique.ttf');
+    font-weight: 100;
+}

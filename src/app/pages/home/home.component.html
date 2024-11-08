@@ -1,0 +1,103 @@
+<div class="body">
+    <nav>
+        <div class="logo"> </div>
+        <ul>
+            <a href="#home"><li >Home</li></a>
+            <a href="#aboutus"><li >About us</li></a>
+            <a href="#register"><li >Register</li></a>
+            <a href="#contact"><li >Contact</li></a>
+        </ul>
+
+    </nav>
+    <section id="home">
+        <div class="container intro">
+            <div class="text_intro">
+                <h1>Are you ready <br>for your next script?</h1>
+                <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste cumque quasi consequuntur quis, enim, vero nobis a, cupiditate consequatur optio ipsum esse velit magni? Eum, aperiam? Optio esse asperiores eos ipsum! Eveniet est accusantium et dicta quo fugit esse beatae alias commodi, veritatis dignissimos corporis tempora nemo modi, ipsam delectus officiis voluptate enim dolorem. Placeat repellat eius tempora consequuntur nam odit cupiditate earum provident deleniti veritatis molestias blanditiis reiciendis adipisci dolorem animi, necessitatibus ab incidunt neque unde sed ipsam. Mollitia eum quod eveniet laudantium, perspiciatis saepe omnis corrupti harum! Excepturi impedit a voluptas accusamus officiis ullam molestias, repellendus eum modi?
+                </p>
+    
+            </div>
+            <div class="img_intro">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9mo6QGWzTENyfSD4VUbKDMfxxECpUdXivuQ&s" alt="screnplay" >
+            </div>
+        </div>
+        
+    </section>
+    <section id="aboutus">
+        <div class="container">
+
+            <h2>About us</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut molestias est, vel earum laudantium omnis cum, sit, minus adipisci praesentium vitae nemo a odio rerum. Reiciendis mollitia saepe harum culpa.</p>
+        </div>
+
+    </section>
+    <section id="register">
+        <div class="container box_register">
+            <h3 class="text-center">Sign In to upload projects or get them</h3>
+            <div class="register_form">
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group ">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" formControlName="company_name">
+                        @if (checkError('company_name','required')) {
+                            <p class="p_error">This field is required! </p>
+                        }
+                    </div>
+                    <div class="form-group ">
+                        <label class="form-label">Partita iva</label>
+                        <input type="text" class="form-control" formControlName="p_iva">
+                       <!--  @if (checkError('p_iva','required')) {
+                        <p class="p_error">This field is required! </p>
+                        } -->
+                    </div>
+                    <div class="form-group ">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" formControlName="email">
+                        @if (checkError('email','required')) {
+                        <p class="p_error">This field is required! </p>
+                        }
+                    </div>
+                    <div class="form-group ">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" formControlName="telefono">
+                        @if (checkError('telefono','required')) {
+                        <p class="p_error">This field is required! </p>
+                        }
+                    </div>
+                    <div class="form-group ">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" formControlName="password">
+                        @if (checkError('password','required')) {
+                        <p class="p_error">This field is required! </p>
+                        }
+                    </div>
+                    <div class="form-group ">
+                        <label class="form-label">Role</label>
+                        <select class="form-select form-control" formControlName="role">
+                            <option value="writer">Script Writer</option>
+                            <option value="producer">Producer House</option>
+                        </select>
+                        @if (checkError('role','required')) {
+                        <p class="p_error">This field is required! </p>
+                        }
+                    </div>
+                   <div class="d-flex justify-content-center">
+                        <input type="submit" value="Subscribe" class="btn">
+                   </div>
+    
+                   </form>
+                    <div class="text-center mt-5">
+                     <a [routerLink]="['/access']">- Login -</a>
+                    </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="contact">
+        <div class="container p-5">
+            <h4>contact</h4>
+            <p>aqui contactos</p>
+        </div>
+    </section>
+    <div class="footer"></div>
+</div>

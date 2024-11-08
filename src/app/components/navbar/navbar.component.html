@@ -1,0 +1,22 @@
+<div class="nav">
+   
+
+    <nav>
+        <div class="logo"></div>
+        <ul>
+            <li [routerLink]="['']">Home</li>
+            <li [routerLink]="['profile']">My Profile</li>
+            <li [routerLink]="['projects']">Projects</li>
+
+           <!--  <li [routerLink]="['about']">About Us</li>
+            <li [routerLink]="['register']">Register</li> -->
+           <!--  <li [routerLink]="['access','projects']">Project</li> -->
+            <!-- <li [routerLink]="['contact']">Contact</li> -->
+           @if(token){
+                <li (click)="logout()">Logout</li>
+           }
+          
+        </ul>
+    </nav>
+   
+</div>

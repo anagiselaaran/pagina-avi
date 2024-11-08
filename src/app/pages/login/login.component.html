@@ -1,0 +1,25 @@
+<router-outlet></router-outlet>
+
+<div class="body">
+
+    <div class="logo" [routerLink]="['/']">
+
+    </div>
+    <div class="log">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group ">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" formControlName="email">
+            </div>
+            <div class="form-group ">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" formControlName="password">
+            </div>
+            <div class="d-flex justify-content-center">
+                <input type="submit" value="Login" class="btn">
+            </div>
+        </form>
+    </div>
+</div>
+
+
